@@ -4,5 +4,11 @@
       "WITH_SASL=disabled",
       "WITH_ZSTD=disabled"
     ]
+  },
+  "sfml": {
+    "debian_packages": [
+      "libgl-dev",
+      "libopenal-dev"
+    ]
   }
 }
