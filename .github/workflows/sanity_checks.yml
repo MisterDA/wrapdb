@@ -37,3 +37,20 @@ jobs:
       - name: Sanity Checks
         run: |
           python tools/sanity_checks.py
+
+  macOS:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Fetch tags and unshallow
+        run: git fetch --unshallow --tags
+
+      - name: Install packages
+        run: |
+         brew install ninja
+         pip3 install meson
+
+      - name: Sanity Checks
+        run: |
+          ./tools/sanity_checks.py
